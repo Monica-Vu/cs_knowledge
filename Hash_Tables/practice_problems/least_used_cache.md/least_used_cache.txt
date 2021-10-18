@@ -1,1 +1,0 @@
-Describe an implementation of a least-used cache, and big-O notation of it.
