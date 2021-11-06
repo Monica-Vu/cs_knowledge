@@ -1,4 +1,9 @@
 # Ask Questions & Clarify Requirements 
+* Re-read the question and make notes or diagrams 
+* Go through each provided example and ensure you understand what's happening 
+* Be aware of any contraints **ex/ time, space, valid operations**
+
+## Questions to Consider
 * What is the input data am I provided? (type and format)
 * What output data expected? (type and format). Clarify if you need to return the exact data structure OR if the information itself is returned. 
 * What are the minimum and maximum values for the input data?
@@ -13,34 +18,40 @@
 * Ask the interviewer if they're familiar with the programming language syntax
     * If they're not, do your best to explain as you go
 
-----
-TODO...summarize the following:
-ASK QUESTIONS:
-- What data am I provided? (type, format); what are the minimum and maximum values of this data? 
-- What is the simplest case? The most complicated?
-- What is the expected output (type, format) — clarify if you just need the data. Is this the expected data structure or is that information sufficient?
-- Do I need to transform my data before computing? ex/ For Strings
-- Does this problem remind me of other problem and can I draw inspiration from it? 
-- What are some of the tools I provided (or am limited to)? 
-- Is the input always valid? Edge cases? If the example was unclear, go through it again
+# Brainstorm
+* Try to express your ideas in a concise, verbal manner
+* State why you think something might work (or why it might not)
+* State ideas even if you're unsure 
+* Better to have a solution than no solution (don't strive for perfection)
+* When appropriate, use technical terms ex/ memoization, names of algorithmic techniques, pass by reference/value
 
-BEFORE:
-- Ask engineer if they're familiar with language syntax 
-- Mention why you might be doing certain parts  
+# Algorithm
+* Once you decided with the interviewer(s) which method you will go for, try to write an algorithm or pseudocode
+* Try to break parts into the smallest pieces possible to make it easier to create pure functions to break down your work and reduce work 
+* Check the concatenation of values are of the same type if there's no automatic type coercion 
+ex/ In JavaScript, if you do "1" + 1, it returns "11" 
+* Avoid using global variable when possible 
+* If you're cutting corners, state to the interviewer you are ex/ "In normal conditions, I would write a regex to parse this string rather not `split()`, which may not cover all cases."
 
-BRAINSTORM: think out loud and plan a solution via pseudocode 
-- Re-read the question out loud
-- Go through each example that is provided
-- Try to come up with other examples (think edge cases) 
-- Make notes or diagrams in comments
-- Try to express in a concise, verbal manner
-- When appropriate, use technical terms ex/ memoization, names of algorithmic techniques, pass by reference/value
+# Write Your Code
+* As you go through your code, mention what need you plan to implement 
+* Explain why you might be writing particular syntax 
+* Ideally the easiest part if you know your chosen language well enough
 
-COMPLETE YOUR SOLUTION: 
-- Ideally the easiest part, but make sure you know your language pretty well
+# Testing & Reflection 
+* Write test cases (ensure you cover the typical and edge cases). While doing these tests, do a dry-run, comment the value of any variables declared or used
 
-DEVELOP: 
-- Test and optimize your solution (if possible)
-- State the current time complexity and space complexity
-- Go through some edge cases 
-- Talk about improvements (at the minimum) 
+## Test Case to Consider
+* Null Values 
+* Empty Values
+* Only 1 value of the subtype ex/ one character for strings, one item for bigger data structures
+* Negative Values
+* Zero
+* Different type of input that one being expected 
+* Off-by-one errors 
+
+* State the time complexity and space complexity
+* Talk about possible improvements (and implement if time permits)
+Tip: To increase speed of a program, you can chose a better data structure or algorithm OR use more memory ex/ use a hash map/dictionary and a doubly linked list to get O(1) time complexity for `get` and `put` operation in LRU cache
+
+# Sources

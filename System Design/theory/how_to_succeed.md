@@ -1,6 +1,6 @@
 # How to Succeed in a System Design Interview
 ## General Tips 
-* Think of the interview as more of a brainstorming session with [ano]other member(s)
+* Think of the interview as more of a brainstorming session with anoother member(s)
 * Familiarize yourself with different topics on how to approach them 
 * Understand the best practices and common pitfalls of modern software systems 
 * Be able to explore different directions
@@ -12,7 +12,7 @@
 - Clarify any ambiguity early in the interview and YOUR assumptions about the product 
 ex/ If being asked to design a product like Twitter, Facebook, or Reddit. Make your assumptions. 
 - Identify the system goals 
-- Identify the identity, needs, and use cases of the system user
+- Identify the identity, needs and use cases of the system user
 - Identify the inputs and outputs of the system 
 
 2. Establish the Scope

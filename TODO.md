@@ -10,3 +10,6 @@ https://clockwise.software/blog/relational-vs-non-relational-databases-advantage
 https://aloa.co/blog/relational-vs-non-relational-database-pros-cons
 
 https://towardsdatascience.com/relational-vs-non-relational-databases-f2ac792482e3
+
+Do all recommended questions:
+https://techinterviewhandbook.org/algorithms/linked-list/
