@@ -16,7 +16,7 @@ ex/ If being asked to design a product like Twitter, Facebook, or Reddit. Make y
 - Identify the inputs and outputs of the system 
 
 2. Establish the Scope
-- Describe the features to be created or that was taked 
+- Describe the features to be created 
 - Try to define all features by importance. Make sure you and your interviewer agree on the product. 
 - Should we discuss the end-to-end experience or just the API? 
 - What clients do we want to support (mobile, web, desktop)?

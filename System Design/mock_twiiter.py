@@ -7,7 +7,6 @@ and view their analytics data (likes, retweets, etc.) for the past day, week, mo
 Tasks:
 - Allow user to login
 
-
 Questions:
 1. Do users already have an account? 
 

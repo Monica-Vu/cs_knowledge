@@ -21,7 +21,7 @@ Flat rate for time, but cost of intial parking spot will be vary.
 
 **PUBLIC**
 * Reserve parking slot (/reserve) 
-params: garbage_id, start_time, end_time
+params: garage_id, start_time, end_time
 returns: reservation_id, spot_id
 
 * Payment (will likely use a 3rd party like Stripe, Square, or might even build it in-house) (/payment)

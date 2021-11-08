@@ -13,3 +13,5 @@ https://towardsdatascience.com/relational-vs-non-relational-databases-f2ac792482
 
 Do all recommended questions:
 https://techinterviewhandbook.org/algorithms/linked-list/
+
+See what Python zip does
