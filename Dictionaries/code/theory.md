@@ -82,10 +82,17 @@ list(dict_a.values())[0]
 list(dict_a.values())[-1]
 ```
 
-## Deleting a key
+## Deleting a Key
 ```
 del dict_a[key]
 ```
+
+```
+dict_a.pop(key)
+```
+
+## Deleting Keys
+* Use any function mentioned in `Deleting a Key` 
 
 ## Merging Dictinaries 
 Python 3.5: Use the unpacking operator (**) to create a dictionary from the two smaller dictionaries. You can add as many dictionaries between the braces.
@@ -160,4 +167,63 @@ print (dic_grades)
 >>> {'Sam': 90, 'Adam': 85, 'Tom': 55, 'Harry': 70}
 ```
 
-Start at "Alternative ways to create a dictionary" from: https://towardsdatascience.com/dictionaries-in-python-84b05bb95629
+## Referencing a Dictionary
+When you referece a dictionary, it means that any changes applied to the dicitonary that is getting referenced 
+
+```
+dic_a = {'A': 'Apple', 'B': 'Ball', 'C': 'Cat'}
+dic_b = dic_a       # Simple reassignment (Reference assignment)
+
+dic_b['D'] = 'Dog'
+print (dic_b)
+>>> {'A': 'Apple', 'B': 'Ball', 'C': 'Cat', 'D': 'Dog'}
+print (dic_a)
+>>> {'A': 'Apple', 'B': 'Ball', 'C': 'Cat', 'D': 'Dog'}
+```
+
+## Shallow Copy
+Use `copy()` function if you want to get just gt the intial values. 
+```
+dic_a = {'A': 'Apple', 'B': 'Ball', 'C': 'Cat'}
+dic_b = dic_a.copy()
+
+dic_b['D'] = 'Dog'
+
+# New, shallow copy, has the new key-value pair
+print (dic_b)
+>>> {'A': 'Apple', 'B': 'Ball', 'C': 'Cat', 'D': 'Dog'}
+
+# The parent dictionary does not have the new key-value pair
+print (dic_a)
+>>> {'A': 'Apple', 'B': 'Ball', 'C': 'Cat'}
+```
+
+However, if you modify the dictionary with mutable objects that is getting referenced, these changes will also be seen with the previous dictionary. 
+```
+dic_a = {'A': 'Apple', 'B': 'Ball', 'C': 'Cat'}
+dic_b = dic_a.copy()
+
+dict_b['A]
+```
+
+## Renaming Existing Keys
+* Pop the value with the key you want to rename
+* Insert the new key into the dictionary with the value from above
+```
+dict_a = {'Sam': 90, 'Adam': 85, 'Tom': 55, 'Harry': 70}
+
+dict_a['Alex'] = dic_a.pop('Adam')
+
+print (dict_a)
+>>> {'Sam': 90, 'Tom': 55, 'Harry': 70, 'Alex': 85}
+```
+
+## Check if Key Exists
+```
+dic_a = {'A': 'Apple', 'B': 'Ball', 'C': 'Cat', 'D': 'Dog'}
+'A' in dic_a
+# True
+
+'E' in dic_a
+# False
+```
