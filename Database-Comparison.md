@@ -1,0 +1,1 @@
+https://medium.com/@zhenwu93/relational-vs-non-relational-databases-8336870da8bc
