@@ -17,7 +17,7 @@
 
 * Use **nouns** that represent the **entity** instead of verbs in endpoint paths 
     * Our HTTP request already has a verb, which makes it redundant 
-    * See: [Common Methods](#common-http-methods) and [Examples](##express-example)
+    * See: [common HTTP methods](#common-http-methods), [examples with common HTTP metods](##express-example), and [Naming](#naming)
 
 * If an object can contain another object, group those that contain associated  information (up to 2-3 depths) to minimize attackers getting unnecessary info. See `/articles/:articleId/comments` endpoint from [the example](##express-example)
     * Consider returning the URI as part of the response. See: [Endpoint-Depth-Example](##Nested-Endpoint-Example)
@@ -202,17 +202,46 @@ You can add a query parameter called `sort` and specify which fields to sort whe
 
 * Good secrets management
 
-* Choose when to enforce authoriation with request-level authorization: look at an incoming request and see if user has access to resource or not 
+* Choose when to enforce authorization with request-level authorization: look at an incoming request and see if user has access to resource or not 
 
 * Outside of the above, use authorization logic in application code
 
 * Use good libraries or third party tools ex/ Oso, Okta 
 
-# Unsorted Examples 
+# Naming
+* Represent collections via plural and singular items via an id with the pluralized version
+* Ensure URI are consistent 
+* Name based on what it is ex/ Store, Procedure
+* Use forward slash (`/`) to indicate hierarchical relationships ex/ `http://api.example.com/device-management/managed-devices/{id}/scripts/{id}`
+* Do not use trailing forward slash in url
+* Use hyphen (`-`) to seperate words when naming and do not use underscores to increase readability, especially in long path segments
+* Use lowercases in URIs 
+* Do not use file extensions 
+* Query parameters are used for filtering, limitations, or sorting
+
+## Examples
 Make a endpoint to get posts of a particular user: 
 `/users/:userId/posts` 
 
 Make an endpoint to get employees between ages 18 to 30. One possible endpoint is `/employees?minAge=18&maxAge=30`
+
+# Terminology
+**Resource:**
+* a mapping to a set of entities (not the entity itself) ex/ weather info
+* can be a singleton or collection ex/ `authors` is a collection resource, `author` is a singleton resource. This translate to `/author` to get a `author` collection and `/author/{authorId}` to get a specific author
+* can have sub-collections ex/ `authors` can have `posts`, which can be defined as `/author/{authorId}/posts` 
+
+**URI:** uniformed resource identifiers to address resources
+
+**Document Resource:** singular concept similiar to object instance or database record (has fields and values) ex/ an author can be represented as `/author/:id`
+
+**Collection:** server-managed directory of resources ex/ a bunch of authors (plural) ex/ `/authors`, `http://api.example.com/device-management/managed-devices`, `http://api.example.com/user-management/users`, `http://api.example.com/user-management/users/{id}/accounts`
+
+**Store:** A client-managed resource repo that allows an API client to put resources in, get them back out and decide when to delete them (each has a URI chosen by client)
+ex/ `http://api.example.com/song-management/users/{id}/playlists`
+
+**Controller:** procedural concepts (executable actions) that are presented by verbs 
+ex/ `http://api.example.com/cart-management/users/{id}/cart/checkout`
 
 # Sources
 [Best practices for REST API design](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
