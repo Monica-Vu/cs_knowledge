@@ -98,8 +98,8 @@ Tables:
 (3) Interactions (id -> PK, TYPE -- Retweet, Like, Mention, Direct Message, tweet_id -> FK, performer_account id, receiver_ account id, timestamp)
 
 5. Talk about common data structures or algorithms needed
-- Class for each user (username, email, password, display_image, account_id, list of tweets)
-- Class for each Tweet (id, num_retweets, num_likes, content as string). Methods include retweet and like. 
+- Class for each user (username, email, password, display_image, account_id, list of tweets). Methods include liking, retweeting, making a tweet, and mention)
+- Class for each Tweet (id, num_retweets, num_likes, content as string). 
 
 6. Talk about tradeoffs
 - Which type of database?

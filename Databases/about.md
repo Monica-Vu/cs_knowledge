@@ -10,7 +10,7 @@
 * Does not support many-to-many relationships well
 * Usually have predefined data that can be supported
 * Most popular
-e
+
 **Examples:** mySQL
 
 ## Nonrelational Databases (Management System)
@@ -24,3 +24,5 @@ e
 https://www.oracle.com/ca-en/database/what-is-database/
 
 https://en.wikipedia.org/wiki/Rapid_application_development
+
+https://medium.com/@zhenwu93/relational-vs-non-relational-databases-8336870da8bc

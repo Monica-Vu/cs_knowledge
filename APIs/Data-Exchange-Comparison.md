@@ -81,6 +81,7 @@ When a user buys ticket, there can be a difference between seat selection and pa
 
 # gRPC 
 * uses text-based data formats: Protocol Buffers binary format
+* made by Google
 
 ## Advantages
 * exact and wicked fast: de facto standard for inter-service data exchange on the backend
