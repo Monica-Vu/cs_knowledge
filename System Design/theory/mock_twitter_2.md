@@ -94,7 +94,7 @@ Database:
 
 Tables:
 (1) Users' info (id --> PK, username -> SK, email -> SK, password, display_image, display_name, num_followers, num_following)
-(2) Tweets (id -> PK, account_id -> FK, content --> object)
+(2) Tweets (id -> PK, account_id -> FK, content -> object)
 (3) Interactions (id -> PK, TYPE -- Retweet, Like, Mention, Direct Message, tweet_id -> FK, performer_account id, receiver_ account id, timestamp)
 
 5. Talk about common data structures or algorithms needed
