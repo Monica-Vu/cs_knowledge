@@ -1,4 +1,5 @@
 """
+TODO: put this in a seperate MD
 BRAINSTORM: 
 - When we iterate through the list, we can decide to add the item to the list or not
 - As we iterate through the list, we may find smaller elements -- this might allow us to extend the potential longest increasing subsequence

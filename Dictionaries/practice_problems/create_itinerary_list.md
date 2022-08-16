@@ -7,9 +7,10 @@ Output: [YVR, SFO, YYZ, NYC]
 
 # Thought Process 
 1. Questions / Assumptions
-- Will the input be not empty and always valid (only strings of places)
+- Will the input be not empty and always valid (only strings of places seperated by a colon)
 
 Input: list of strings of source to destination seperated by a comma, our starting place
+
 Output: A list of the trip iternary, representing where we been
 
 2. Brainstorm + Algorithm

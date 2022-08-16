@@ -1,3 +1,4 @@
+// TODO: make more detailed notes
 # Graphs
 A non-linear data structure that has a finite set of node (vertices) that are connected by edges.
 
@@ -24,7 +25,7 @@ A non-linear data structure that has a finite set of node (vertices) that are co
 #### Advantages
 * Easier to implement and follow than adjaceny list
 * Identifying if there's an edge from a vertex u to v only takes O(1) 
-* Removing an edge only takes O(1)
+* Removing an edge only takes O(1) -- only need to change to 0
 
 #### Disadvantages
 * Consumes more space than necessary (OV^2) regardless of size
@@ -35,7 +36,7 @@ A non-linear data structure that has a finite set of node (vertices) that are co
     * You might see weights associated with them 
 ```
 0: [1, 4]
-1:[0, 4, 2, 3]
+1: [0, 4, 2, 3]
 2: [1, 3]
 4: [3, 0, 1]
 ```
@@ -139,6 +140,7 @@ Space Complexity: O(V)
 * Starting at the root, pick a node to visit. Then visit that node's neighbour. If we encounter a neighbour that is already visited, we backtrack. We continue until all are visited.
 * For graphs with cycles, be sure to be track if a node is visited 
 
+// TODO: fix
 #### Implementation
 ```
 def dfs_util(self, node, visited):
@@ -147,13 +149,23 @@ def dfs_util(self, node, visited):
 
     for neighbour in self.vertices[node]:
         if neighbour not in visited:
-        self.dfs_util(neighbour, visited)
+            self.dfs_util(neighbour, visited)
     
-    def dfs(self, node):
-        visited = set()
-        self.dfs_util(node, visited)
+def dfs(self, node):
+    visited = set()
+    self.dfs_util(node, visited)
+
+g = Graph()
+g.add_edge(0, 1)
+g.add_edge(0, 2)
+g.add_edge(1, 2)
+g.add_edge(2, 0)
+g.add_edge(2, 3)
+g.add_edge(3, 3)
+
+g.DFS(2)
 ```
-* For disconnected graphs, you will have to call DFS on the unconnected nodes 
+* For disconnected graphs, you will have to call DFS on unreachable nodes 
 
 Time Complexity: O(V + E)
 Space Complexity: O(V)

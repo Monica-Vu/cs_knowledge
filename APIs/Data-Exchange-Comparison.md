@@ -65,7 +65,7 @@ When a user buys ticket, there can be a difference between seat selection and pa
 
 ## Advantage
 * Express the field(s) you want to get
-* Lots of nesting ex/ You can easily the post content and comments 
+* Lots of nesting ex/ You can easily the get post content and comments 
 * Flexible in how data is returned when making query 
     * easier for frontend developers (save labour, memory, and CPU consumption)
     * filter to get results you want
@@ -91,7 +91,7 @@ When a user buys ticket, there can be a difference between seat selection and pa
 ## Disadvantages
 * client and server need to support the same Protocol Buffer specification: 
     * `.proto` file needs to be carefully coordinated
-    * Rest or GRAPHQL can add new attribute(s) to a esource (REST) or GraphQL without impacting the code
+    * Rest or GRAPHQL can add new attribute(s) to a resource (REST) or GraphQL without impacting the code
 * no universal support for public-facing client-server interactions
     * Only 48.2% of websites on Internet support HTTP/2 
 * lots of time to study but some can be saved with `protoc`

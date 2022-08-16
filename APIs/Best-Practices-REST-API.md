@@ -1,7 +1,6 @@
 # What is REST API?
-* One of the most common way web services 
+* One of the most common types of web services 
 * Allows applications to communicate with a server via REST API 
-* API: application programming interface that conforms to specific architectural constraints (ex/ stateless communication and cacheable data)
 * usually called over HTTP 
 * a set of architectural constraints
 
@@ -19,7 +18,7 @@
     * Our HTTP request already has a verb, which makes it redundant 
     * See: [common HTTP methods](#common-http-methods), [examples with common HTTP metods](##express-example), and [Naming](#naming)
 
-* If an object can contain another object, group those that contain associated  information (up to 2-3 depths) to minimize attackers getting unnecessary info. See `/articles/:articleId/comments` endpoint from [the example](##express-example)
+* If an object can contain another object, group those that contain associated  information (up to 2-3 depths) to minimize attackers getting unnecessary info. See `/articles/:articleId/comments` endpoint from [this example](##express-example)
     * Consider returning the URI as part of the response. See: [Endpoint-Depth-Example](##Nested-Endpoint-Example)
 
 * Handle errors gracefully and return standard error codes to minimize confusions
@@ -83,7 +82,7 @@ app.delete('/posts/:id', (req, res) => {
     // code to add new posts 
 });
 
-// a GET method to get comments ofa particular article (child resource)
+// a GET method to get comments of a particular article (child resource)
 app.get('/posts/:postId/comments', (req, res) => {
     const { postId } = req.params;
     const comments = [];
@@ -97,14 +96,14 @@ app.listen(3000, () => console.log('server started'));
 ```
 
 ## Nested Endpoint Example 
-If you want to return a commentor of a particular article, return the URI in the JSOn response (`"author": "/users/:userId"`), rather than `/articles/:articleId/comments/:commentId/commentor`
+If you want to return a commentor of a particular article, return the URI for the particular user instead (`"author": "/users/:userId"`), rather than `/articles/:articleId/comments/:commentId/commentor`
 
 # Common HTTP Status Codes
 | Value        | Name   | Meaning |        
 | ------------- |-------------| --------- |
 | 400 | Bad Request | Client-side input failed validation | 
 | 401 | Unauthorized | User is not authorized to access a resource (usually because they're not authenticated) | 
-| 403 | Unauthorized | User is not authorized to access a resource (usually because they're not authenticated) | 
+| 403 | Forbidden | User is authenticated, but not authorized to access a resource | 
 | 404 | Not Found | A resource is not found.
 | 500 | Internal server error | Generic Error: don't throw explicitly. | 
 | 502 | Bad Gateway | Invalid response from an upstream server |
@@ -226,6 +225,8 @@ Make a endpoint to get posts of a particular user:
 Make an endpoint to get employees between ages 18 to 30. One possible endpoint is `/employees?minAge=18&maxAge=30`
 
 # Terminology
+* **API:** application programming interface that conforms to specific architectural constraints (ex/ stateless communication and cacheable data)
+
 **Resource:**
 * a mapping to a set of entities (not the entity itself) ex/ weather info
 * can be a singleton or collection ex/ `authors` is a collection resource, `author` is a singleton resource. This translate to `/author` to get a `author` collection and `/author/{authorId}` to get a specific author

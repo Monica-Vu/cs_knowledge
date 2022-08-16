@@ -55,13 +55,13 @@ Data is ACID (atomity, consistency, durability, isolation)
 #### Document 
 * Stores data in JSON, BSON or XML
 * Items are nested 
-* Most wiely used data
+* Most widely used data
 * Flexible as data becomes like code 
 
 ex/ MongoDB
 
 #### Key-value
-* Each element in database is stored as a key paired with an attributename e
+* Each element in database is stored as a key paired with an attribute name
 ex/ shopping carts, user preferences, user profiles 
 
 #### Column Store
