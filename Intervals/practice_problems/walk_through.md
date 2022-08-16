@@ -1,3 +1,4 @@
+// TODO: fix this
 # Problem
 Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
  
@@ -31,6 +32,7 @@ Let's assume not and that we will have to consider it ourselves.
 * Inputs are always valid 
 
 2. Brainstorm ideas. Say everything even if you're 100% you're correct. Ideally, your interviewer will be helpful. 
+
 **Brainstorm**
 * We're unsure if the list is sorted. What would we have to do if it was not sorted? If it's not sorted, we would have to iterate through the rest of the list and find the lowest start value and then compare it against our current merged interval. If it was sorted, we just need to check the next item.
 * If it was sorted, we can take the first item as the input, get the start value of the item. If that start value is greater than the end value of the last item in our current output, then we know it's seperate and just append it. Otherwise, we get the bigger end value.
@@ -75,7 +77,7 @@ def merge(intervals):
 * Duplicate intervals  
 
 6. Analyze your code
-**Time Complexity: O(n * log N)** --> need to iterate through array and sort it (can cost up to O(n) as well)
+**Time Complexity: O(n * n log n)** --> need to iterate through array and sort it (can cost up to O(n) as well)
 **Space Complexity: O(n)** --> worst case scenario is that none of the intervals overlap but we may need to store the sorted result if we don't want to overlap the result
 
 7. At the minimum, discuss possible improvements

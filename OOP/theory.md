@@ -5,7 +5,7 @@ By defining a set of classes that represent and encapsulate objects in a program
 
 # Basic Concepts 
 ## Encapsulation 
-* Hide class' private details by binding data and functions into a single unitclass 
+* Hide class' private details by binding data and functions into a single unit class 
 * A class is well-capsulated when details about functionality to the interface is shown and does not allow code access to its private data 
 
 ### Analogies / Examples

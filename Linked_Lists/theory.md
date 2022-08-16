@@ -5,8 +5,8 @@ A data structure that represents sequential data where each data is stored in a 
 * Insertion and deletion of a node given its location is O(1) whereas lists will have to be shifted but extra memory is required to store the node and the data
 
 # General Tips 
-* It might be useful to have a dummy node so operations never have to be done on the head or tail and null-checs are not required 
-* When possible, use a doubly linked list (but something to clarify for interviews)
+* It might be useful to have a dummy node so operations never have to be done on the head or tail and null-checks are not required 
+* When possible, use a doubly linked list (but clarify if you can do that during interviews)
 * Borrow ideas from the "reverse a linked list" problem to reduce storage 
 * To partition a linked list, create two seperate linked list and join them together
 * Use Two Pointers and Fast & Slow Pointers ex/ getting kth last node, detect cycles, get middle node
