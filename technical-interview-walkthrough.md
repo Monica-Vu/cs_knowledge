@@ -5,7 +5,7 @@
 
 ## Questions to Consider
 * What is the input data am I provided? (type and format)
-* What output data expected? (type and format). Clarify if you need to return the exact data structure OR if the information itself is returned. 
+* What output data expecated? (type and format). Clarify if you need to return the exact data structure OR if the information itself is returned. 
 * What are the minimum and maximum values for the input data?
 * Is the input always valid? If not, what are the edge cases?
 * Generate some test cases and the expected output if possible. Expand beyond the given examples. 
