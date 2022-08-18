@@ -62,6 +62,10 @@ len(s)
 # Misc Technical Tips
 * **Corner Cases**: Empty, Stack with one or two item(s)
 
+# Use Cases
+* Undo/Redo 
+* Going back and forth between browsers 
+
 # Sources 
 https://www.techinterviewhandbook.org/algorithms/stack/
 
