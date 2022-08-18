@@ -6,7 +6,8 @@
 * mutable: can be modified after creation. 
 * you can use positive indexing (index starts from 0) or negative indexing (index starting from the end of the list)
 
-## Example - List Creation
+# Common Operations
+## Creation
 ```
 a = []
 a = list()
@@ -14,7 +15,7 @@ a = ['Hello', 10, True, 2.0]
 a = list('Hello', 10, True, 2.0()
 ```
 
-## Example - Indexing
+## Indexing
 ```
 a = ['Hello', 10, True, 2.0]
 
@@ -22,7 +23,6 @@ a[1]    # equals to 10
 a[-1]   # equals to 2.0
 ```
 
-# Common Operations
 ## Sorting
 use keywords `sort` or `sorted` 
 
@@ -125,6 +125,13 @@ a.count(7) # Expected Output: 3 (no return)
 
 Cost: O(n)
 
+# Common Terminology
+**Subarray**: A range of contigious values within an array
+Example: given an array [2, 3, 6, 1, 5, 4], [3, 6, 1] is a subarray while [3, 1, 5] is not a subarray.
+
+**Subsequence:** A sequence that can be created by deleting some or no elements of a list without changing the order 
+Example: given an array [2, 3, 6, 1, 5, 4], [3, 1, 5] is a subsequence but [3, 5, 1] is not a subsequence.
+
 # Advantages
 * Can store multiple items with one variable name (items are contigious in memory)
 * Fast access to elements if you have an index
@@ -132,13 +139,6 @@ Cost: O(n)
 # Disadvantages 
 * Addition and removal of elements except in the last positions are slow because the elements need to be shifted to accomdate the new or missing element 
 * You may not be able to alter the size after intialization. In this case, you would need to make a new list and copy over the existing elements, which would take O(n) time.
-
-# Common Terminology
-**Subarray**: A range of contigious values within an array
-Example: given an array [2, 3, 6, 1, 5, 4], [3, 6, 1] is a subarray while [3, 1, 5] is not a subarray.
-
-**Subsequence:** A sequence that can be created by deleting some or no elements of a list without changing the order 
-Example: given an array [2, 3, 6, 1, 5, 4], [3, 1, 5] is a subsequence but [3, 5, 1] is not a subsequence.
 
 # Time Complexity
 | Operation        | Big O   | Notes |        
