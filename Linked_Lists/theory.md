@@ -26,11 +26,7 @@ def count_num_nodes(head):
 
 ```
 
-## Reverse Linked List In-Place
-
 ## Find Middle Node 
-
-## Merge Two Linked List 
 
 # Common Corner Cases 
 * Single node

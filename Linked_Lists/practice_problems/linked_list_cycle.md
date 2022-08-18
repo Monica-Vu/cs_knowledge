@@ -25,7 +25,7 @@ Explanation: There is no cycle in the linked list.
 # Questions, Clarification & Assumptions
 **Possible Questions**
 * Is the input only a number? 
-* -1 means that there's no linked list 
+* Does -1 means that there's no linked list?
 
 **Assumptions**
 * Single linked list as expected input and output type 
@@ -71,7 +71,7 @@ def linked_list_cycle(head):
 ```
 
 # Testing & Reflection 
-See 
+* See `Possible Test Cases`
 
 **Time Complexity:** O(n) --> only need to iterate through the linked list
 **Space Complexity:**  O(1) --> only two pointers stored regardless of size 
