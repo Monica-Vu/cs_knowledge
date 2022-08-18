@@ -1,12 +1,18 @@
-// TODO: make more detailed notes
 # Graphs
-A non-linear data structure that has a finite set of node (vertices) that are connected by edges.
+* A non-linear data structure that has a finite set of node (vertices) that are connected by edges. 
+* Edges can be directed or undirected along with an optional value (this is known as a weighted graph). 
+
+## Trees
+Unidirected non-cyclic graph in which any two vertices are connected by exactly on edge 
 
 ## Uses
+* Model relationship
 * Represent networks (real-life or social)
 * Paths in a city of telephone network 
 
 ## Representations 
+In algorithm interview, you are typically given the input as 2D matrices where the cells are the nodes and each cell can traverse to its adjacent cells. Being able to traverse through a 2D matrix is important. Make sure to do boundary checking. 
+
 ### Adjacency matrix
 * A 2D list/array of size V x V, where V is the number of vertices or nodes in the graph
 * 1 means there's a edge from vertex i to j while 0 means there's no connection 
@@ -42,7 +48,7 @@ A non-linear data structure that has a finite set of node (vertices) that are co
 ```
 
 #### Advantages
-* Saves space: only uses O(|V| + |E|) but worst case is there can be O(V^2)
+* Saves space: only uses O(|V| + |E|) but worst case is O(V^2)
 * can easily find all vertices adjacent to a vertex 
 
 #### Disadvantages
@@ -140,7 +146,6 @@ Space Complexity: O(V)
 * Starting at the root, pick a node to visit. Then visit that node's neighbour. If we encounter a neighbour that is already visited, we backtrack. We continue until all are visited.
 * For graphs with cycles, be sure to be track if a node is visited 
 
-// TODO: fix
 #### Implementation
 ```
 def dfs_util(self, node, visited):
@@ -179,3 +184,4 @@ Space Complexity: O(V)
 # Sources
 https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
+https://www.techinterviewhandbook.org/algorithms/graph/
