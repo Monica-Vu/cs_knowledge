@@ -1,5 +1,5 @@
 # Depth First Search (DFS)
-A recursive algorithm to search all vertices of a graph. 
+A recursive algorithm to search all vertices of a graph by going far as possible and then backtracking when you encounter all nodes that are visited.
 
 # Algorithm 
 1. Put any of the vertices on top of a stack.
