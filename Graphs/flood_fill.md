@@ -62,5 +62,11 @@ class Solution:
 - Only one column
 - Typical Case 
 
+# Analysis
+N = number of pixels
+
+**Time Complexity:** O(N) --> We might need to visit every pixel
+**Space Complexity:** O(N) --> size of implicit call stack when calling dfs
+
 # Source
 https://leetcode.com/problems/flood-fill/discuss/109604/Easy-Python-DFS-(no-need-for-visited)!!!
